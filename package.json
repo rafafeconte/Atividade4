@@ -1,0 +1,14 @@
+{
+  "name": "cypress2",
+  "version": "1.0.0",
+  "description": "rafael test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Rafael Conte",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.0.1"
+  }
+}
