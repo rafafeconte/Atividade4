@@ -2,7 +2,7 @@ import cadastroFactory from '../factories/CadastroFactories'
 var formulario = cadastroFactory.cadastro()
 
 describe('cadastro de usuario', ()=>{
-    it('cadastro de usuario com sucesso', ()=>{
+    it.skip('cadastro de usuario com sucesso', ()=>{
     
         cy.visit('https://magento.nublue.co.uk/')
         cy.get('div[class="panel header"] a[href="https://magento.nublue.co.uk/customer/account/create/"]').click()
@@ -22,7 +22,7 @@ describe('cadastro de usuario', ()=>{
 
         cy.visit('https://magento.nublue.co.uk/')
         cy.get('div[class="panel header"] a[href="https://magento.nublue.co.uk/customer/account/create/"]').click()
-        cy.get('#lastname').type('Conte')
+        cy.get('#lastname').type(formulario.first)
         cy.get('input[id="is_subscribed"]').click()
         cy.get('#assistance_allowed_checkbox').click()
         cy.get('div[class="field required"] input[type="email"]').type(formulario.emailNilay)
@@ -34,12 +34,12 @@ describe('cadastro de usuario', ()=>{
     
     })
 
-    it.skip('tentativa de cadastro com senha diferente', ()=>{
+    it('tentativa de cadastro com senha diferente', ()=>{
 
         cy.visit('https://magento.nublue.co.uk/')
         cy.get('div[class="panel header"] a[href="https://magento.nublue.co.uk/customer/account/create/"]').click()
-        cy.get('#firstname').type('Nilay8')
-        cy.get('#lastname').type('Conte')
+        cy.get('#firstname').type(formulario.first)
+        cy.get('#lastname').type(formulario.last)
         cy.get('input[id="is_subscribed"]').click()
         cy.get('#assistance_allowed_checkbox').click()
         cy.get('div[class="field required"] input[type="email"]').type(formulario.emailNilay)

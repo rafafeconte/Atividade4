@@ -7,11 +7,12 @@ export default {
 
       var firstName = faker.name.firstName()
       var lastName = faker.name.lastName()
-
+      
       var dados = {
           first: firstName,
           last: lastName,
           email: faker.internet.email(firstName),
+          emailNilay: faker.internet.email('nilay_conte'),
           password: '134679rA'
           
       }
