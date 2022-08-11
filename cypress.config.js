@@ -5,5 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
     
     },
+    baseUrl: 'https://magento.nublue.co.uk/'
   },
 });
